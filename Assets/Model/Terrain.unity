@@ -427,14 +427,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734870849}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 516.5, y: 9.8, z: 499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!1 &849629528
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +463,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0, g: 0, b: 0.191, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -875,6 +875,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1134443793348271715, guid: 4ee71b55c3e4bf64d97a9388a6086620, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2528435611142569894, guid: 4ee71b55c3e4bf64d97a9388a6086620, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10271094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3752953503421550213, guid: 4ee71b55c3e4bf64d97a9388a6086620, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09428469
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959760891293919866, guid: 4ee71b55c3e4bf64d97a9388a6086620, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10271094
+      objectReference: {fileID: 0}
+    - target: {fileID: 7435056344301403173, guid: 4ee71b55c3e4bf64d97a9388a6086620, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10463793
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310164661241157026, guid: 4ee71b55c3e4bf64d97a9388a6086620, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.09848777
+      objectReference: {fileID: 0}
     - target: {fileID: 8491763078321561050, guid: 4ee71b55c3e4bf64d97a9388a6086620, type: 3}
       propertyPath: m_RootOrder
       value: 4
