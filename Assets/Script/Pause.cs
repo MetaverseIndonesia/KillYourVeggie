@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     public GameObject option;
     public AudioSource audioSource;
+    public string mainMenu;
 
     private float musicVolume = 1f;
     private void Start()
@@ -26,10 +28,10 @@ public class Pause : MonoBehaviour
     {
         option.SetActive(false);
     }
-    public void quit() //quit
+    public void leave() //quit
     {
         HideAll();
-        Application.Quit();
+        SceneManager.LoadScene(mainMenu);
     }
 
     public void updateVolume(float volume) //change volume slider

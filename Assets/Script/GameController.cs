@@ -128,11 +128,14 @@ public class GameController : MonoBehaviour
     //
     //
     //public int scoreValue;
+    //public int damageValue;
     //private GameController gameController;
+    //private GameController playerHealth;
     //
     // void Start()
     //{
     //    GameObject gameControllerObject = GameObject.FindWithTag("GameController");       //Kalau script ini dipakai di playernya, tagnya ganti supaya sama. Kalau mau gampang, tambah 'empty object' dan tagnya 'GameController'
+    //    GameObject playerHealthObject = GameObject.FindWithTag("Player");
     //    if (gameControllerObject != null)
     //    {
     //        gameController = gameControllerObject.GetComponent<GameController>();
@@ -141,13 +144,22 @@ public class GameController : MonoBehaviour
     //    {
     //    Debug.Log("Cannot find 'GameController' script");
     //    }
+    //    if (playerHealthObject != null)
+    //    {
+    //        playerHealth = playerHealthObject.GetComponent<GameController>();
+    //    }
+    //    if (playerHealthObject = null)
+    //    {
+    //    Debug.Log("Cannot find 'PlayerHealth' script");
+    //    }
     //}
     //private void OnTriggerEnter(Collider other)
     //{
     //   if (other.tag == "Player")
     //    {
-    //        gameController.GameOver();
+    //        gameController.DecreaseHealth(damageValue);           //Ini menggunakan public float. Nanti damage-nya diganti di Unity.
+    //        new WaitForSeconds(0,5f);
     //    }
-    //    gameController.Addscore(scoreValue);
+    //    gameController.Addscore(scoreValue);                      //Tambahkan ini kalau musuhnya mati. Aku taruh ini disini sementara, berati ketika kena apapun, akan kasih nilai. Bagusnya pakai 'if () {}'.
     //}
 }
