@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+    public GameObject pause;
     public GameObject option;
     public AudioSource audioSource;
     public string mainMenu;
@@ -20,11 +21,21 @@ public class Pause : MonoBehaviour
         audioSource.volume = musicVolume;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            option.SetActive(true);
-            //Option popup sebagai parent object dari resume button, quit button, dan volume slider.
+            pause.SetActive(true);
+            //Pause popup sebagai parent object dari resume button, quit button, dan option button.
         }
     }
     public void HideAll() //resume
+    {
+        pause.SetActive(false);
+        option.SetActive(false);
+    }
+    public void Options()
+    {
+        option.SetActive(true);
+        //Option popup sebagai parent object dari volume slider dan back button.
+    }
+    public void Back()
     {
         option.SetActive(false);
     }
