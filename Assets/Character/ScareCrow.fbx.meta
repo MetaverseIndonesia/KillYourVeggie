@@ -6,7 +6,32 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: c3f8aa9b6f03cae40884bb11b1d0dd96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 99566638b3bef264e9756327226f9a26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: c3f8aa9b6f03cae40884bb11b1d0dd96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scarecrow
+    second: {fileID: 2100000, guid: c3f8aa9b6f03cae40884bb11b1d0dd96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: example.001
+    second: {fileID: 2100000, guid: c3f8aa9b6f03cae40884bb11b1d0dd96, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
