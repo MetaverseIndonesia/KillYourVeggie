@@ -1,8 +1,10 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon;
 
-public class CameraMovement : MonoBehaviour
+public class CameraMovement : MonoBehaviourPunCallbacks
 {
     public float sensX;
     public float sensY;
@@ -19,6 +21,10 @@ public class CameraMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 
