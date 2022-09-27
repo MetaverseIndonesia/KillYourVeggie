@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     bool grounded;
 
     public Transform orientation;
+    private PhotonView pv;
 
     float horizontalInput;
     float verticalInput;
@@ -43,17 +44,21 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     }*/
     private void Start()
     {
-         
+        pv = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
         readyToJump = true;
+        
     }
 
     private void Update()
     {
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
-        MyInput();
+        if (pv.IsMine)
+        {
+            MyInput();
+        }
         SpeedControl();
 
         if (grounded)

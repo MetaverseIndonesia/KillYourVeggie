@@ -5,9 +5,11 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using System;
+using Photon.Pun.Demo.PunBasics;
+
 public class GameManagerKYV : MonoBehaviourPunCallbacks
 {
-
+    
 
 
     #region Photon Callbacks
@@ -16,6 +18,23 @@ public class GameManagerKYV : MonoBehaviourPunCallbacks
     /// <summary>
     /// Called when the local player left the room. We need to load the launcher scene.
     /// </summary>
+    /// 
+
+    public void Start()
+    {
+        if (PlayerManager.LocalPlayerInstance == null)
+        {
+            Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+            // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
+            //sPhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, 0f), Quaternion.identity, 0);
+            PhotonNetwork.Instantiate("Player", new Vector3(510, 1, 500), Quaternion.identity, 0);
+        }
+        else
+        {
+            Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
+        }
+
+    }
     public override void OnLeftRoom()
     {
         SceneManager.LoadScene(0);

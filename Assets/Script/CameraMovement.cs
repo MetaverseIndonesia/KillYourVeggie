@@ -17,6 +17,10 @@ public class CameraMovement : MonoBehaviourPunCallbacks
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        if (!photonView.IsMine)
+        {
+            gameObject.SetActive(false);        
+        }
     }
 
     private void FixedUpdate()
