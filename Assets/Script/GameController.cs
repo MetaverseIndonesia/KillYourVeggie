@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
                 hazardCount2 = (int)waveNumber - 2;
                 if (waveNumber == 5)
                 {
-                    Vector3 spawnPosition = new Vector3(Random.Range(480f, 550f), 0, 480f);
+                    Vector3 spawnPosition = new Vector3(476.45f, 30.93f, 510.8f);
                     Quaternion spawnRotation = Quaternion.identity;
                     Instantiate(hazard3, spawnPosition, spawnRotation);
 
@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
                 }
                 for (int i = 0; i < hazardCount; i++)
                 {
-                    Vector3 spawnPosition = new Vector3(550f, 0f, Random.Range(480f, 550f));
+                    Vector3 spawnPosition = new Vector3(Random.Range(480f, 550f), 0, 470f);
                     Quaternion spawnRotation = Quaternion.identity;
                     Instantiate(hazard, spawnPosition, spawnRotation);
                     yield return new WaitForSeconds(spawnWait);
